@@ -1,0 +1,12 @@
+body{
+  background-color: whitesmoke;
+
+}
+.App{
+  background-color: white;
+  margin: auto;
+  width: 500;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
