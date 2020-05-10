@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Line, Bar } from 'react-chartjs-2';
+import { Line, Bar, } from 'react-chartjs-2';
 
 import { fetchDailyData } from '../../api';
 
@@ -33,7 +33,7 @@ const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
         }}
         options={{
           legend: { display: false },
-          title: { display: true, text: `Current state in ${country}` },
+          
         }}
       />
     ) : null
@@ -41,7 +41,7 @@ const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
 
   const lineChart = (
     dailyData[0] ? (
-      <Line 
+      <Bar
         data={{
           labels: dailyData.map(({ date }) => date),
           datasets: [{
@@ -49,8 +49,16 @@ const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
             label: 'Infected',
             borderColor: '#f48a04',
             backgroundColor: 'white',
+           
+          }, 
+          {
+            data: dailyData.map((data) => data.recovered),
+            label: 'Infected',
+            borderColor: '#f48a04',
+            backgroundColor: 'white',
             
           }, 
+          
           {
             data: dailyData.map((data) => data.deaths),
             label: 'Deaths',
@@ -66,7 +74,7 @@ const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
 
   return (
     <div className={styles.container}>
-      {country ? barChart : lineChart}
+      {country ? barChart : barChart}
     </div>
   );
 };
