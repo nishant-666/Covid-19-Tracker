@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://unpkg.com/tesseract.js@v2.1.0/dist/tesseract.min.js'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>OCR Hermano!</title>
+</head>
+<body style="background-image: url(&quot;/blur.png&quot;);">
+    <div class="ui raised very padded text container segment ui center aligned container" style="margin-top: 20px;">
+        <div class="ui fluid card">
+            <div class="content">
+                
+              <div class="center aligned header">Image to Text!</div>
+              <div class="center aligned description">
+                <p>Extract text from an image!</p>
+              </div>
+            </div>
+            <div class="extra content">
+                <form action="/upload" method="POST" enctype="multipart/form-data">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      
+                    </div>
+                    <div class="custom-file">
+                      <input type="file" class="custom-file-input" name="image" id="inputGroupFile01"
+                        aria-describedby="inputGroupFileAddon01">
+                      <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                    </div>
+                  </div>
+              
+              <div class="center aligned author">
+                  
+                <button type="submit" class="ui primary button" style="margin-top:20px">Convert</button>
+            
+              </div>
+            </form>
+            </div>
+          </div>
+
+        </div>
+    
+      
+</body>
+</html>
